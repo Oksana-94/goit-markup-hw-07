@@ -1,0 +1,104 @@
+.footer {
+  padding: 60px 0;
+  color: $secondary-text-color;
+  background-color: $background-footer-color;
+}
+
+.footer .logotype {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-address {
+  color: $secondary-text-color;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.footer-link {
+  display: block;
+  margin-top: 9px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.slogan-item {
+  margin-left: 93px;
+}
+
+.slogan-item .slogan {
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+.slogan {
+  display: block;
+  font-weight: 700;
+  margin-left: 70px;
+  padding-top: 12px;
+}
+
+footer .form-input {
+  background-color: inherit;
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+footer .form-field {
+  margin-bottom: 0;
+}
+
+footer .form-field input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  
+  color: rgba(255, 255, 255, 0.6);
+}
+
+footer .form-btn {
+  display: flex;
+  margin-top: 50px;
+  min-width: 200px;
+  min-height: 50px;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $secondary-text-color;
+  background-color: $accent-color;
+}
+
+footer .form-btn > .icon {
+  margin-left: 10px;
+}
+
+.footer .list-team {
+  padding: 0;
+  margin-top: 20px;
+  margin-left: 70px;
+}
+
+.footer .link-icon {
+  display: flex;
+  fill: #ffffff;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 12px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+&:hover,
+&:focus {
+  background-color: #2196f3;
+}
+}
