@@ -178,16 +178,20 @@ ul {
   background-color: transparent;
 
   transform: translateX(1360%) translateY(-115%);
+
 }
 
 .close-black {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-.close:hover &,
-.close:focus & {
-  fill: var(--accent-color);
+
+  .close:hover &,
+  .close:focus & {
+  fill: $accent-color;
+  }
+
 }
-}
+
 
 .form-field {
   position: relative;
@@ -208,11 +212,8 @@ ul {
   color: $primary-text-color;
 }
 
-.form-field {
-  margin-bottom: 4px;
-}
-
 .form-label {
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -227,9 +228,14 @@ ul {
   padding-left: 42px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-input:hover,
 .form-input:focus,
+.comment:hover,
 .comment:focus {
   outline: transparent;
   border: 1px solid $accent-color;
@@ -240,8 +246,16 @@ ul {
   position: absolute;
   top: 50%;
   left: 12px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:hover {
+    fill: $accent-color;
+  }
 }
 
+.form-input:hover + .icon,
 .form-input:focus + .icon {
   fill: $accent-color;
 }
@@ -266,6 +280,9 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field input::placeholder {
@@ -275,7 +292,16 @@ ul {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox {
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #757575;
+  margin-left: 9px;
+
+
+& .checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -285,14 +311,6 @@ ul {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.checkbox-label {
-  display: inline-flex;
-  align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
-  color: #757575;
-  margin-left: 9px;
 }
 
 .icon-check {
@@ -303,14 +321,15 @@ ul {
   border: 2px solid #212121;
   border-radius: 4px;
   margin-right: 8.38px;
-}
 
-.checkbox:checked + .icon-check {
+
+.checkbox:checked + & {
   border-color: transparent;
   background-color: $accent-color;
   background-image: url('../images/icon-check.svg');
   background-size: contain;
   background-origin: border-box;
+}
 }
 
 .checkbox-link {
@@ -348,15 +367,16 @@ ul {
 
 .address-list {
   margin-left: auto;
-}
 
-.address-list .address {
+
+& .address {
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
-.address-list .address:not(:last-child) {
+& .address:not(:last-child) {
   margin-right: 50px;
+}
 }
 
 .address {
@@ -398,16 +418,17 @@ ul {
 
   text-align: center;
   justify-content: center;
-}
 
-.button {
+
+& .button {
   text-align: center;
   min-width: 73px;
   min-height: 38px;
 }
 
-.button:not(:last-child) {
+& .button:not(:last-child) {
   margin-right: 8px;
+}
 }
 
 .btn {
@@ -570,6 +591,7 @@ ul {
   margin-bottom: 30px;
 }
 
+
 .icon-antenna::before {
   background-image: url(../images/antenna.svg);
 }
@@ -614,22 +636,26 @@ ul {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-right: auto;
+  max-lines: auto;
 
   margin-bottom: 50px;
 }
 
-.section-list {
+.section.class .section-list {
   display: flex;
   width: 1170px;
 }
 
+
 .section-item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
-}
 
-.section-item:nth-child(3n) {
+
+&:nth-child(3n) {
   margin-right: 0;
+}
 }
 
 .section-item .text {
@@ -751,11 +777,15 @@ ul {
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.list-clients .link-icon:hover,
-.list-clients .link-icon:focus {
+
+  &:hover,
+  &:focus {
   border: 1px solid #2196f3;
   fill: #2196f3;
+  }
 }
 
+footer .form-input {
+    color: $form-input-color;
+  }
